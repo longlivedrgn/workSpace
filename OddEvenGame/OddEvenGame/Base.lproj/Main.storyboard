@@ -23,6 +23,95 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="LDs-DW-Eiz">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="computer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28y-Ub-s2m">
+                                        <rect key="frame" x="10" y="306" width="410" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남은 구슬갯수 : 10개" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dQ-R6-j38">
+                                        <rect key="frame" x="10" y="366" width="410" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fmn-Sp-LbL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과화면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mT0-A0-yiP">
+                                        <rect key="frame" x="10" y="426" width="410" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="grZ-2k-i7Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE2-yg-YcV">
+                                        <rect key="frame" x="10" y="576" width="410" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="wfa-ST-nO5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남은 구슬 갯수 : 10개" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmh-dP-btp">
+                                        <rect key="frame" x="10" y="526" width="410" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dkx-2a-dPE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuG-Th-Qai">
+                                        <rect key="frame" x="0.0" y="848" width="430" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GjS-PR-Q5U"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="gameStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECV-me-LZZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="fZD-17-A0p"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3dQ-R6-j38" firstAttribute="top" secondItem="28y-Ub-s2m" secondAttribute="bottom" constant="30" id="4iH-Ux-rYT"/>
+                                    <constraint firstItem="mT0-A0-yiP" firstAttribute="leading" secondItem="fZD-17-A0p" secondAttribute="leading" constant="10" id="8Pa-cn-e0V"/>
+                                    <constraint firstItem="fZD-17-A0p" firstAttribute="trailing" secondItem="mT0-A0-yiP" secondAttribute="trailing" constant="10" id="AGx-hn-Rzh"/>
+                                    <constraint firstItem="fZD-17-A0p" firstAttribute="bottom" secondItem="MuG-Th-Qai" secondAttribute="bottom" id="D1F-yJ-tjG"/>
+                                    <constraint firstItem="mT0-A0-yiP" firstAttribute="centerX" secondItem="LDs-DW-Eiz" secondAttribute="centerX" id="ENJ-x1-2Dc"/>
+                                    <constraint firstItem="MuG-Th-Qai" firstAttribute="leading" secondItem="fZD-17-A0p" secondAttribute="leading" id="ENt-VY-NKN"/>
+                                    <constraint firstItem="28y-Ub-s2m" firstAttribute="trailing" secondItem="3dQ-R6-j38" secondAttribute="trailing" id="EaA-NS-iZW"/>
+                                    <constraint firstItem="mT0-A0-yiP" firstAttribute="top" secondItem="3dQ-R6-j38" secondAttribute="bottom" constant="30" id="FWy-MD-IDY"/>
+                                    <constraint firstItem="3dQ-R6-j38" firstAttribute="leading" secondItem="mT0-A0-yiP" secondAttribute="leading" id="GhW-FQ-wTM"/>
+                                    <constraint firstItem="3dQ-R6-j38" firstAttribute="trailing" secondItem="mT0-A0-yiP" secondAttribute="trailing" id="Hy1-bp-R0w"/>
+                                    <constraint firstItem="28y-Ub-s2m" firstAttribute="height" secondItem="3dQ-R6-j38" secondAttribute="height" id="Wjd-wR-Jyc"/>
+                                    <constraint firstItem="XE2-yg-YcV" firstAttribute="trailing" secondItem="lmh-dP-btp" secondAttribute="trailing" id="bfR-fC-GeH"/>
+                                    <constraint firstItem="XE2-yg-YcV" firstAttribute="leading" secondItem="lmh-dP-btp" secondAttribute="leading" id="cGv-92-aaY"/>
+                                    <constraint firstItem="lmh-dP-btp" firstAttribute="trailing" secondItem="mT0-A0-yiP" secondAttribute="trailing" id="hQ8-nf-BNg"/>
+                                    <constraint firstItem="mT0-A0-yiP" firstAttribute="centerY" secondItem="LDs-DW-Eiz" secondAttribute="centerY" id="iFC-Qm-fiD"/>
+                                    <constraint firstItem="fZD-17-A0p" firstAttribute="trailing" secondItem="MuG-Th-Qai" secondAttribute="trailing" id="khI-if-hef"/>
+                                    <constraint firstItem="lmh-dP-btp" firstAttribute="top" secondItem="mT0-A0-yiP" secondAttribute="bottom" constant="20" id="mFc-WE-CRT"/>
+                                    <constraint firstItem="28y-Ub-s2m" firstAttribute="leading" secondItem="3dQ-R6-j38" secondAttribute="leading" id="oiO-4L-mPk"/>
+                                    <constraint firstItem="lmh-dP-btp" firstAttribute="leading" secondItem="mT0-A0-yiP" secondAttribute="leading" id="tBv-6g-4Mo"/>
+                                    <constraint firstItem="XE2-yg-YcV" firstAttribute="top" secondItem="lmh-dP-btp" secondAttribute="bottom" constant="20" id="v9E-e2-phI"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남은 구슬갯수 : 10개" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex9-bB-vXP">
                                 <rect key="frame" x="10" y="366" width="410" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -103,6 +192,7 @@
                     </view>
                     <connections>
                         <outlet property="computerBallCountLb1" destination="ex9-bB-vXP" id="FKW-vd-Rf7"/>
+                        <outlet property="resultLb1" destination="dWk-u0-tMU" id="4ZS-Pe-Pcj"/>
                         <outlet property="userBallCountLb1" destination="hpw-7q-2XF" id="0Vh-Fi-g44"/>
                     </connections>
                 </viewController>
