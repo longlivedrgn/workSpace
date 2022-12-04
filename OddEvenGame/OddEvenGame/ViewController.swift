@@ -13,7 +13,10 @@
  */
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SettingDelegate {
+
+    
+    
 
     @IBOutlet weak var fistImage: UIImageView!
     @IBOutlet weak var imageContainer: UIView!
@@ -46,6 +49,16 @@ class ViewController: UIViewController {
             self.showAlert()
         }
 
+    }
+    
+    @IBAction func settingBtnPressed(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        settingVC.settingDelegate = self
+        settingVC.modalPresentationStyle = .fullScreen
+        self.present(settingVC, animated: true)
+        
     }
     
     
@@ -158,6 +171,10 @@ class ViewController: UIViewController {
     // 컴퓨터 값 -> 랜덤값 1~10 사이의 값
     func getRandom() -> Int {
         return Int(arc4random_uniform(10) + 1)
+    }
+    func getBallsCount(ballsCount: Int) {
+        self.userBallCountLb1.text = "\(ballsCount)"
+        self.computerBallCountLb1.text = "\(ballsCount)"
     }
     
 }
