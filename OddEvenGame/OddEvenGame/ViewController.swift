@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         userBallCountLb1.text = String(userBallisCount)
         // 처음 시작될 때는 fistImage가 보이지 않게 해놓는다.
         self.imageContainer.isHidden = true
-    }
+        }
 
     @IBAction func gameStartPressed(_ sender: Any) {
         
@@ -48,41 +48,63 @@ class ViewController: UIViewController {
 
     }
     
+    
     func showAlert(){
+        
         // alert -> 화면 중앙, actionsheet -> 화면 하단
         let alert = UIAlertController.init(title: "GAME START", message: "홀 짝을 선택해주세요", preferredStyle: .alert)
         
         let oddBtn = UIAlertAction(title: "홀", style: .default){ _ in
             print("홀버튼을 클릭했습니다.")
             // first -> 첫번째 textfield를 말하는 것이다.
-            print(alert.textFields?.first?.text)
-            
+//            print(alert.textFields?.first?.text)
             guard let input = alert.textFields?.first?.text, let value = Int(input) else {
                 return
             }
             
+            if value > self.userBallisCount {
+                let alertview = UIAlertController.init(title: "안됩니다", message: "베팅값이 너무 큽니다", preferredStyle: .alert)
+                let okBtn = UIAlertAction(title: "다시하시겠습니까?", style: .default){_ in
+                    self.showAlert()
+                }
+                alertview.addAction(okBtn)
+                self.present(alertview, animated: true)
+                return
+            }
+                
             print("입력한 값은 \(input)입니다.")
             self.getWinner(count: value, select: "홀")
         }
         
         let evenBtn = UIAlertAction(title: "짝", style: .default){ _ in
             print("짝버튼을 클릭했습니다.")
-            
-            guard let input = alert.textFields?.first?.text else {
+
+            guard let input = alert.textFields?[0].text else {
                 return
             }
+            
             guard let value = Int(input) else {
                 return
             }
             
+            if value > self.userBallisCount {
+                let alertview = UIAlertController.init(title: "안됩니다", message: "베팅값이 너무 큽니다", preferredStyle: .alert)
+                let okBtn = UIAlertAction(title: "다시하시겠습니까?", style: .default){_ in
+                    self.showAlert()
+                }
+                alertview.addAction(okBtn)
+                self.present(alertview, animated: true)
+                return
+            }
+
             self.getWinner(count: value, select: "짝")
 
         }
-        
+
         alert.addTextField{ textfield in
             textfield.placeholder = "베팅할 구슬의 개수를 입력해주세요."
         }
-        
+
         alert.addAction(oddBtn)
         alert.addAction(evenBtn)
 
@@ -90,10 +112,10 @@ class ViewController: UIViewController {
             print("화면이 띄어졌습니다.")
         }
     }
+    
     func getWinner(count: Int, select: String){
         let com = self.getRandom()
         let comType = com % 2 == 0 ? "짝" : "홀"
-        
         var result = comType
         
         if comType == select {
@@ -108,11 +130,10 @@ class ViewController: UIViewController {
             self.calculateBalls(winner: "com", count: count)
         }
     }
+    
     func checkAccountEmpty(balls: Int) -> Bool {
         return balls == 0
     }
-    
-    
     
     func calculateBalls(winner: String, count: Int){
         if winner == "com" {
@@ -141,3 +162,5 @@ class ViewController: UIViewController {
     
 }
 
+
+// 0 이하이면 값을 0으로 받고 -> 완전 멈추기
